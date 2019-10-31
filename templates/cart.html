@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Amazin</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<style>
+	/* Remove the navbar's default rounded borders and increase the bottom margin */ 
+	.navbar {
+	  margin-bottom: 50px;
+	  border-radius: 0;
+	}
+
+	/* Remove the jumbotron's default bottom margin */ 
+	 .jumbotron {
+	  margin-bottom: 0;
+	}
+
+	/* Add a gray background color and some padding to the footer */
+	footer {
+	  background-color: #f2f2f2;
+	  padding: 25px;
+	}
+	</style>
+</head>
+
+<body>
+
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<!------ Include the above in your HEAD tag ---------->
+
+	<div class="container">
+		<!-- <style>
+		  body { background-image: url(http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7RHJsbFhpanhPQXc/layout_structure_regions_guidance5.png);
+		       background-repeat: no-repeat;
+		       background-size: 100% 100%;}
+		</style> -->
+		
+		<div class="row-fluid">
+
+
+		<form action="{{ url_for('update_card_info' ) }}" method="post">
+			<style type="text/css">
+				body{
+					position: relative;
+					margin-left: 300px;
+					margin-right: 300px;
+					margin-top: 150px;
+					margin-bottom: 150px;
+					border: 3px solid #73AD21;
+					padding: 10px;
+					/*overflow: auto;*/
+				}
+			</style>
+			<h3>Order ID : {{ order_id }}</h3><br>
+		    <input type="hidden" name="order_id" id='order_id' value="{{ order_id }}"><br>
+	      	<!-- <style type="text/css">
+				body{
+					position: relative;
+					margin-left: 300;
+					margin-right: 300;
+					margin-top: 150;
+					margin-bottom: 150;
+					border: 3px solid #73AD21;
+					padding: 10px;
+					overflow: auto;
+				}
+			</style> -->
+	        <fieldset>
+
+	          <div id="legend">
+	            <legend class="">Payment
+	            	<!-- <style type="text/css">
+						body{
+							text-align: center;
+						}
+					</style> -->
+	            </legend>
+	          </div>
+	     
+	          <!-- Name -->
+	          <div class="control-group">
+	            <label class="control-label"  for="username">Card Holder's Name</label>
+	            <div class="controls">
+	              <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+	            </div>
+	          </div>
+	     
+	          <!-- Card Number -->
+	          <div class="control-group">
+	            <label class="control-label" for="email">Card Number</label>
+	            <div class="controls">
+	              <input type="text" id="email" name="card_no" placeholder="" class="input-xlarge">
+	            </div>
+	          </div>
+	     
+	          <!-- Expiry-->
+	          <div class="control-group">
+	            <label class="control-label" for="password">Card Expiry Date</label>
+	            <div class="controls">
+	              <select class="span3" name="expiry_month" id="expiry_month">
+	                <option></option>
+	                <option value="01">Jan (01)</option>
+	                <option value="02">Feb (02)</option>
+	                <option value="03">Mar (03)</option>
+	                <option value="04">Apr (04)</option>
+	                <option value="05">May (05)</option>
+	                <option value="06">June (06)</option>
+	                <option value="07">July (07)</option>
+	                <option value="08">Aug (08)</option>
+	                <option value="09">Sep (09)</option>
+	                <option value="10">Oct (10)</option>1
+	                <option value="11">Nov (11)</option>
+	                <option value="12">Dec (12)</option>
+	              </select>
+	              <select class="span2" name="expiry_year">
+	                <option value="13">2013</option>
+	                <option value="14">2014</option>
+	                <option value="15">2015</option>
+	                <option value="16">2016</option>
+	                <option value="17">2017</option>
+	                <option value="18">2018</option>
+	                <option value="19">2019</option>
+	                <option value="20">2020</option>
+	                <option value="21">2021</option>
+	                <option value="22">2022</option>
+	                <option value="23">2023</option>
+	              </select>
+	            </div>
+	          </div>
+	     
+	          <!-- CVV -->
+	          <div class="control-group">
+	            <label class="control-label"  for="password_confirm">Card CVV</label>
+	            <div class="controls">
+	              <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="span2">
+	            </div>
+	          </div>
+	     
+	          <!-- Save card -->
+	          <div class="control-group">
+	            <div class="controls">
+	              <label class="checkbox" for="save_card">
+	                <input type="checkbox" id="save_card" value="option1">
+	                Save card on file?
+	              </label>
+	            </div>
+	          </div>
+	     
+	          <!-- Submit -->
+	          <div class="control-group">
+	            <div class="controls">
+	              <button class="btn btn-success">Pay Now</button>
+	            </div>
+	          </div>
+	     
+	        </fieldset>
+	      </form>
+	    </div>
+	</div>
+</body>
+</html>

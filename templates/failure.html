@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Amazin</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>Success Notification Boxes</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" media="all" href="{{ url_for('static',filename='styles/style.css') }}">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+
+<body>
+  
+  <div id="w">
+    <div id="content">
+      <!-- Icons source http://dribbble.com/shots/913555-Flat-Web-Elements -->
+      <div class="notify errorbox">
+        <style type="text/css">
+          body{
+            text-align: center;
+          }
+        </style>
+        <h1>{{ params['status'] }}!</h1>
+        <span class="alerticon" ></span>
+        <p>The payment failed.<br>Order ID : {{ params['order_id'] }}
+        </p>
+      </div>
+      
+      
+    </div><!-- @end #content -->
+  </div><!-- @end #w -->
+
+</body>
+</html>
